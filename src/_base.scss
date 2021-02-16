@@ -1,0 +1,45 @@
+// Global
+$text-color: #b1b1b4;
+$primary-black: #16181b;
+$secondary-black: #121417;
+$border-color: #4c4c4c;
+
+//Break point for responsiveness
+$medium: 1224px;
+$small: 520px;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  color: $text-color;
+  background: $primary-black;
+  background-attachment: fixed;
+  letter-spacing: 0.1px;
+  font-family: "Roboto", sans-serif;
+}
+
+@mixin line-clamp($number) {
+  display: -webkit-box;
+  -webkit-line-clamp: $number;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.app__container {
+  display: flex;
+  margin-top: 10vh;
+}
